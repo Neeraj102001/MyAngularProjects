@@ -1,53 +1,77 @@
-# Result-Management-Application
-A Result Management System using HTML, CSS, JavaScript , Node and using MVC Model.<br/>
-• Two types of users can login to application by clicking a button on homepage.<br/>
-• Students can enter their roll number and date of birth to view their result.<br/>
-• Teachers can View all records, add new record, edit and delete the records.<br/>
+# **Result Management System**
 
-# Setup Guide 
+## ** Project Overview**
+The **Result Management System** is a web-based application designed to help teachers manage student records and allow students to view their results securely. The project ensures **secure authentication**, **role-based access**, and a **user-friendly interface**.
 
-## Database 
-1. Signin/up to https://www.mongodb.com/cloud/atlas/register 
-2. Create a cluster and connect it to your application.
-3. Refer to : https://www.section.io/engineering-education/nodejs-mongoosejs-mongodb/
-4. Do edit your password and desired database name in the connection string copied to app.js file.
-  
-## Backend 
-1. Open the project in Visual Studio Code.
-2. Go to toolbar --> terminal --> Open new terminal.
-3. Run "npm install" and "npm install -g nodemon" .
-4. Now to run the project --> Run "nodemon app.js" on terminal.
-  
-## Frontend
-1. Open URL "https://localhost:3000" on a browser.
+## ** Features**
+- **Teacher Dashboard** – Manage student records (Add, Edit, Delete Results).
+- **Student Portal** – View results using **Roll Number & DOB**.
+- **Authentication** – Secure login for teachers and students.
+- **Error Handling** – Prevent unauthorized access.
+- **Responsive UI** – Built with **React** and **Bootstrap**.
 
-# Screen-Shots 
+## **🛠 Tech Stack**
+### **Frontend**
+- React.js (React Router, Redux Toolkit)
+- Material-UI / Bootstrap
+- Axios (API Calls)
 
-## Project Structure
+### **Backend**
+- Node.js, Express.js
+- MongoDB (Mongoose ORM)
+- JWT Authentication
 
-<img width="267" alt="Project structure" src="https://user-images.githubusercontent.com/63288542/149562789-4f73ff63-f0cb-49ca-98a3-a24d1d3480dd.PNG">
+### **Deployment**
+- **Frontend** – Netlify / Vercel
+- **Backend** – Render / AWS EC2 / Vercel
+- **Database** – MongoDB Atlas
 
-## HomePage 
+## ** Installation & Setup**
+### **1️⃣ Clone the Repository**
+```bash
+git clone https://github.com/yourusername/Result-Management-System.git
+cd Result-Management-System
+```
 
-<img width="400" alt="homepage" src="https://user-images.githubusercontent.com/63288542/149562845-9e15edce-4292-4ae7-9122-eb7c0e0da909.PNG">
+### 2️⃣ Backend Setup
+```bash
+cd backend
+npm install
+```
+Create a **.env** file and add:
+```env
+MONGO_URI=your_mongodb_uri
+JWT_SECRET=your_jwt_secret
+```
+Run the backend:
+```bash
+npm start
+```
 
-## Teacher Login 
+### 3️⃣ Frontend Setup
+```bash
+cd frontend
+npm install
+npm start
+```
 
-<img width="400" alt="teacher login" src="https://user-images.githubusercontent.com/63288542/149562922-5e7065ea-1fc1-44fa-bc45-503099bb4635.PNG">
+##  API Endpoints
+| Method | Endpoint | Description |
+|--------|---------|-------------|
+| POST | /api/auth/login | Login for Teachers & Students |
+| GET | /api/students/:rollNumber | Fetch Student Result |
+| POST | /api/students | Add Student Result (Teacher Only) |
 
-## Teacher dashboard
+## Future Enhancements
+- Role-Based Access Control (RBAC)
+- Performance Optimization (Lazy Loading, Caching)
+- Dark Mode & Improved UI/UX
 
-<img width="400" alt="teacher dashboard" src="https://user-images.githubusercontent.com/63288542/149563436-2ea54c38-32d7-44a7-85a6-d53a031bb0b9.PNG">
+##  Contributing
+Feel free to fork the repo and submit pull requests. Suggestions are welcome!
 
+## License
+MIT License. Free to use and modify.
 
-## View All Students Result
-
-<img width="400" alt="view all students" src="https://user-images.githubusercontent.com/63288542/149562977-8e2d30db-ef9e-464d-83c5-250b09b6ded4.PNG">
-
-## Add student result
-
-<img width="400" alt="add student" src="https://user-images.githubusercontent.com/63288542/149562992-e2ca4332-18db-4a95-9add-b3460e8b2521.PNG">
-
-## Student Login
-
-<img width="400" alt="student login" src="https://user-images.githubusercontent.com/63288542/149563029-e6640265-693d-49b5-af0f-5a4949fadb71.PNG">
+---
+### Developed by Neeraj Yadav
